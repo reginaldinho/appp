@@ -2,38 +2,41 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
 import About from "./components/About";
 import Departments from "./components/Departments";
 import ThreatLevels from "./components/ThreatLevels";
 import News from "./components/News";
-import Footer from "./components/Footer";
+import Operacoes from "./pages/Operacoes";
 import { Toaster } from "./components/ui/toaster";
 
-// Componente de página principal
-const Home = () => {
-  return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <Hero />
-      <About />
-      <Departments />
-      <ThreatLevels />
-      <News />
-      <Footer />
+// Wrapper para páginas que precisam do layout completo
+const PageWrapper = ({ children }) => (
+  <div className="min-h-screen bg-slate-50">
+    <div className="py-8">
+      {children}
     </div>
-  );
-};
+  </div>
+);
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/sobre" element={<PageWrapper><About /></PageWrapper>} />
+          <Route path="/departamentos" element={<PageWrapper><Departments /></PageWrapper>} />
+          <Route path="/graus-ameaca" element={<PageWrapper><ThreatLevels /></PageWrapper>} />
+          <Route path="/operacoes" element={<Operacoes />} />
+          <Route path="/noticias" element={<PageWrapper><News /></PageWrapper>} />
+          <Route path="/contato" element={<PageWrapper><div className="container mx-auto px-4"><h1 className="text-4xl font-bold text-center">Página de Contato em Desenvolvimento</h1></div></PageWrapper>} />
         </Routes>
+        <Footer />
+        <Toaster />
       </BrowserRouter>
-      <Toaster />
     </div>
   );
 }
