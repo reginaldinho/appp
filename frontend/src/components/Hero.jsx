@@ -8,7 +8,9 @@ const Hero = () => {
   return (
     <section id="home" className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen flex items-center">
       {/* Background overlay pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239CA3AF" fill-opacity="0.03"%3E%3Cpath d="M20 20L0 0h40v40H0V0z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 opacity-20">
+        <div className="w-full h-full bg-slate-700/10 bg-[linear-gradient(45deg,transparent_25%,rgba(156,163,175,0.03)_25%,rgba(156,163,175,0.03)_50%,transparent_50%,transparent_75%,rgba(156,163,175,0.03)_75%)] bg-[length:40px_40px]"></div>
+      </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
