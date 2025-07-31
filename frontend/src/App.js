@@ -9,6 +9,7 @@ import Departments from "./components/Departments";
 import ThreatLevels from "./components/ThreatLevels";
 import News from "./components/News";
 import Operacoes from "./pages/Operacoes";
+import Contato from "./pages/Contato";
 import { Toaster } from "./components/ui/toaster";
 
 // Wrapper para páginas que precisam do layout completo
@@ -32,7 +33,7 @@ function App() {
           <Route path="/graus-ameaca" element={<PageWrapper><ThreatLevels /></PageWrapper>} />
           <Route path="/operacoes" element={<Operacoes />} />
           <Route path="/noticias" element={<PageWrapper><News /></PageWrapper>} />
-          <Route path="/contato" element={<PageWrapper><div className="container mx-auto px-4"><h1 className="text-4xl font-bold text-center">Página de Contato em Desenvolvimento</h1></div></PageWrapper>} />
+          <Route path="/contato" element={<Contato />} />
         </Routes>
         <Footer />
         <Toaster />
