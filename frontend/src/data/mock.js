@@ -13,6 +13,21 @@ export const mockData = {
     classification: "Classificação de Segurança Máxima"
   },
 
+  // Contextualização dos Graus de Ameaça - TEXTO DO DOCUMENTO
+  grausAmeacaContext: {
+    introducao: "Com o decorrer do tempo, após a fundação da TCO, a ocorrência de ataques de seres super poderosos não diminuiu — muito pelo contrário — só aumentou, o que trouxe preocupação aos agentes da organização, que eram mandados para missões sem uma consciência clara do potencial da ameaça enfrentada.",
+    solucao: "Para corrigir esses problemas, em 2010, foram desenvolvidos os graus de ameaça, um método que analisa, com base no potencial destrutivo da ameaça, o tamanho do perigo que ela representa e a coloca em uma das seis classificações possíveis, em ordem crescente de perigo: humano, monstro, demônio, calamidade, nação e global.",
+    observacao: "Cada uma das classificações, conforme enfatizado por seus nomes, sobe em potencial e, consequentemente, possui um diferente método para ser combatido."
+  },
+
+  // Contextualização do Sistema Overall - TEXTO DO DOCUMENTO
+  overallContext: {
+    explicacao: "Visando mensurar o potencial de nossos agentes, desenvolvemos um sistema de classificação abrangente para categorizar suas capacidades com base em seus atributos, potencial destrutivo e alcance geográfico.",
+    diferenca: "Enquanto para a mensuração do nível de poder das ameaças era considerado a proporção do perigo que elas e seus poderes representavam para a região onde estavam localizadas, para medir o dos heróis que servem à TCO é utilizado a chamada tabela geral, que divide suas capacidades em seis atributos, distribuídos em um hexágono: força, velocidade, durabilidade, mental, alcance e poder.",
+    funcionamento: "Cada um desses atributos são classificados em seis níveis, em ordem crescente: D, C, B, A e S. Para cada nível de cada atributo, há uma diferente definição, que determina o mínimo para ser classificado neste nível. A partir da média dos atributos do herói, é definido sua classificação na TCO e, também dependendo de sua experiência, a que missões ele está qualificado para ser mandado.",
+    finalidade: "Esta taxonomia permite resposta proporcional e alocação adequada de recursos para cada tipo de incidente."
+  },
+
   // Graus de ameaça - EXATO DO DOCUMENTO
   threatGrades: [
     {
@@ -132,7 +147,7 @@ export const mockData = {
     ]
   },
 
-  // Os Cinco no Topo - EXATO DO DOCUMENTO
+  // Os Cinco no Topo - TEXTOS COMPLETOS DO DOCUMENTO
   cincoNoTopo: [
     {
       id: 1,
@@ -148,7 +163,8 @@ export const mockData = {
       rank: "S",
       trunfo: "Destruidor de Meteoros",
       artefatoDivino: "Cinturão de Hércules",
-      descricao: "Aposentado, Leroy atingiu o título de campeão indiscutível ao conquistar os quatro cinturões das quatro principais entidades do boxe profissional (WBA, WBC, IBF, e WBO), finalizando sua carreira com 242 vitórias e 0 derrotas. Suas contribuições para a paz mundial e causas sociais o fizeram receber das Nações Unidas o título de 'Cidadão do Mundo'.",
+      textoCompleto: "Representando os Estados Unidos da América, está aquele referenciado como O Mais Forte, Leroy Colin, que atende pelo nome de herói O Rei. Aposentado, Leroy atingiu o título de campeão indiscutível ao conquistar os quatro cinturões das quatro principais entidades do boxe profissional (WBA, WBC, IBF, e WBO), finalizando sua carreira com 242 vitórias e 0 derrotas. É o fundador da primeira competição super de boxe em parceria com WBA, o que foi de grande importância para incentivar a entrada de mais supers nos esportes, consequentemente surgindo federações só com esse intuito. Para a maior parte da população, sua estreia como herói ocorreu na guerra contra \"Deus do Medo Russo\", onde sua participação foi de vital importância ao cuidar sozinho do meteoro que ameaçava destruir a terra. Sua simples presença já foi o catalisador para o término de guerras e outros conflitos armados, como quando parou o conflito entre Armênia e Azerbaijão, e Índia e Paquistão. Após montar sua rede de academias, a The King Acadamy, passou a doar todo o dinheiro que fazia em seus comerciais, parcerias e como herói para ajudar em diversas causas sociais, como no movimento negro, crianças carentes, animais e supers. Seus inúmeros feitos em prol da paz do mundo o fizeram receber das Nações Unidas o título de \"Cidadão do Mundo\" (Citizen of the World). Atualmente, há quase trinta anos atuando como herói, Leroy já salvou a terra mais vezes do que é possível contar com os dedos. Seus feitos justificam sua fama — Colin foi considerado por diversas revistas como o homem mais amado do mundo. Sua coragem e determinação é um espelho que inspira milhões de jovens ao redor do mundo a buscar tornar o planeta um lugar melhor.",
+      descricao: "O campeão indiscutível de boxe com 242 vitórias e 0 derrotas. Considerado o homem mais amado do mundo, recebeu o título de 'Cidadão do Mundo' das Nações Unidas.",
       pais: "USA"
     },
     {
@@ -165,7 +181,8 @@ export const mockData = {
       rank: "S",
       trunfo: "Fimbulwinter",
       artefatoDivino: "Luvas de Baldur",
-      descricao: "Considerada uma das principais responsáveis por dar fim ao período conhecido como a morte da arte, ocorrido entre 2010 e 2020. Eleita seis vezes como a mulher mais bela do mundo, sendo a única permitida a participar e vencer o Big Four.",
+      textoCompleto: "Representando o Reino Unido, está a cantora, multi-instrumentista, modelo, atriz, empresária e heroína mundialmente conhecida Lucy Alba, que atende pelo nome de herói de Rainha de Gelo. É dita como uma das principais responsáveis por dar fim ao período conhecido como a morte da arte, ocorrido entre 2010 e 2020, onde, com somente dezesseis anos, se tornou uma das figuras mais influentes da história do entretenimento. Com sua originalidade e encanto, não só reviveu, mas revitalizou o mundo das artes, lotando estádios com seus shows, desfiles e campanhas. Não somente bastasse, Alba é considerada como a pessoa mais talentosa e competente que o ramo artístico já teve o prazer de ter. Em seu primeiro show, impressionou milhares de pessoas no concerto de Londres, tanto com sua voz — dita como angelical — quanto com seus poderes de gelo, que usou para complementar sua performance. Eleita seis vezes como a mulher mais bela do mundo, em seis concursos diferentes, sendo a única que já foi permitida a participar e vencer o Big Four (Miss Universo, Miss Mundo, Miss International e Miss Earth). Sua carreira como heroína começou como um mero hobby, mas suas capacidades se destacaram tanto que não puderam ser ignoradas pela TCO e outros órgãos de defesa, que rapidamente a tentaram contratar. Entretanto, a Rainha de Gelo somente se tornou uma heroína em tempo integral após receber a proposta do governo do Reino Unido para ser a representante do país, futuramente se tornando um membro dos Cinco no Topo.",
+      descricao: "A figura mais influente da história do entretenimento. Eleita seis vezes como a mulher mais bela do mundo, sendo a única a vencer o Big Four de concursos de beleza.",
       pais: "UK"
     },
     {
@@ -182,7 +199,8 @@ export const mockData = {
       rank: "S",
       trunfo: "Domínio Infinito",
       artefatoDivino: "Máscara do Desgosto",
-      descricao: "No passado, foi um mercenário reconhecido por eliminar políticos corruptos e membros do alto tráfico na Europa Oriental. Suas capacidades de infiltração, espionagem e eliminação impressionaram diversos governos europeus.",
+      textoCompleto: "Representando a Rússia está aquele que já foi o homem mais temido em toda a região eslávica, conhecido como um assassino cruel e impiedoso responsável por trazer a morte de mais de quinhentas pessoas, Edward Russon, que atua pelo nome de herói de Czar de Chernobog. No passado, foi um mercenário desvencilhado de governos ou organizações, reconhecido por eliminar políticos corruptos e membros do alto tráfico na Europa Oriental. Suas capacidades de infiltração, espionagem e eliminação de alvos impressionou diversos governos europeus, que muito tentaram o contratar, porém, nenhum conseguiu o contratar como definitivamente, somente pagar por seus serviços temporários. O único governo que foi capaz de chamar sua atenção foi o governo russo, que, além da cidadania, o ofereceu incontáveis benefícios. Um ano após sua contratação, foi eleito como herói representante do país, conseguindo entrar nos Cinco do Topo graças às suas capacidades notáveis.",
+      descricao: "Ex-mercenário conhecido como o homem mais temido da região eslávica. Reconhecido por eliminar políticos corruptos e membros do alto tráfico na Europa Oriental.",
       pais: "RU"
     },
     {
@@ -199,7 +217,8 @@ export const mockData = {
       rank: "S",
       trunfo: "Arte da Espada, Espada da Tempestade",
       artefatoDivino: "Sutōmukirā",
-      descricao: "Mestre em diversas artes marciais e do kendo, foi de grande importância na guerra entre Japão e China. Recebeu a condecoração como Mensageiro da Paz da ONU por seus esforços pela paz mundial.",
+      textoCompleto: "Representando o Japão, está o herói mais poderoso da Ásia, mestre em diversas artes marciais e do kendo, Kenjiro Senno, que atua pelo nome de herói de o Lorde da Espada. No passado, já foi um guerreiro impiedoso, que participou de diversos conflitos sangrentos na guerra entre Japão e China, tendo sido de grande importância para evitar que seu país fosse dominado pelo exército inimigo. Entretanto, a muito tempo deixou de usar sua lâmina para tirar sangue, aderindo a prática da incapacitação do inimigo. Segundo ele: \"Minha espada não foi criada para tirar a vida de meus semelhantes. Lâminas servem para proteger, não para causar mais dor.\". Seu nome é referência em todo o mundo quando se fala da prática do combate com espadas, tendo dojos espalhadas ao redor todo o globo, com destaque para seu principal dojo em Hokkaido, onde ensina mais de mil discípulos que herdaram o mesmo poder que ele, a Arte da Espada. Suas contribuições sociais são inúmeras, tendo fundado ONGs para a minimização da pobreza e da violência, que não só impactaram no Japão, como em toda a Ásia e Europa. Graças a seus esforços pela paz e por promover a entrada de jovens nas artes marciais e kendo, recebeu a maior honraria que um artista marcial poderia receber, a condecoração como Mensageiro da Paz da ONU.",
+      descricao: "Mestre em diversas artes marciais e do kendo. Recebeu a condecoração como Mensageiro da Paz da ONU por seus esforços pela paz mundial.",
       pais: "JP"
     },
     {
@@ -216,7 +235,8 @@ export const mockData = {
       rank: "S",
       trunfo: "Desconhecido",
       artefatoDivino: "Mangual de Rá, Os Khopesh de Anúbis, Olho de Hórus, Correntes de Seth, Tyet e Ankh...",
-      descricao: "Líder dos Cinco no Topo, dita por O Rei como a mais poderosa dentre os heróis. Membro vitalício do comitê das Nações Unidas. Sua origem e idade exata são desconhecidas, mas afirma já estar viva há mais de um século.",
+      textoCompleto: "Representando o Egito, está a líder dos Cinco no Topo, heroína responsável por trazer a paz entre Oriente Médio e Estados Unidos após a segunda crise do petróleo e aquela dita por Leroy Colin, O Rei, como a mais poderosa dentre os heróis, Nefertari, conhecida pelo nome de herói de Imperatriz do Deserto. Ao lado dos presidentes, ela fez contribuições inestimáveis para seu país, sendo de grande importância para que o Egito se tornasse uma potência mundial. Não somente uma heroína do mais alto escalão da TCO, Nefertari também é um membro vitalício do comitê das Nações Unidas, tendo forte voz na tomada de decisões do grupo. Sua origem e idade exata são desconhecidas, mas afirma já estar viva há mais de um século. O monopólio de artefatos divinos do Egito a permite ter uma variabilidade de habilidades única, o que a torna uma lutadora extremamente versátil e imprevisível.",
+      descricao: "Líder dos Cinco no Topo, dita por O Rei como a mais poderosa dentre os heróis. Membro vitalício do comitê das Nações Unidas. Sua origem e idade são desconhecidas.",
       pais: "EG"
     }
   ],
