@@ -4,6 +4,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Departments from "./components/Departments";
+import ThreatLevels from "./components/ThreatLevels";
+import News from "./components/News";
+import Footer from "./components/Footer";
 import { Toaster } from "./components/ui/toaster";
 
 // Componente de página principal
@@ -13,6 +17,10 @@ const Home = () => {
       <Header />
       <Hero />
       <About />
+      <Departments />
+      <ThreatLevels />
+      <News />
+      <Footer />
     </div>
   );
 };
