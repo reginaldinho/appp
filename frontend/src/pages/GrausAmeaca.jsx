@@ -28,11 +28,26 @@ const GrausAmeaca = () => {
             Graus de Ameaça
           </h1>
           <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-            Desenvolvido em <strong>2010</strong>, o sistema de graus de ameaça analisa o potencial 
-            destrutivo das ameaças com base em seu alcance geográfico e nível de perigo, 
-            classificando-as em seis categorias para garantir resposta adequada.
+            Sistema desenvolvido para analisar o potencial destrutivo das ameaças com base em seu 
+            alcance geográfico e nível de perigo, classificando-as em seis categorias para garantir resposta adequada.
           </p>
         </div>
+
+        {/* Contextualização - TEXTO COMPLETO DO DOCUMENTO */}
+        <Card className="p-8 mb-12 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+          <h2 className="text-3xl font-bold text-center mb-8">Desenvolvimento do Sistema</h2>
+          <div className="space-y-6 text-slate-300 leading-relaxed">
+            <p className="text-lg">
+              <strong className="text-white">{mockData.grausAmeacaContext.introducao}</strong>
+            </p>
+            <p className="text-lg">
+              <strong className="text-white">Solução implementada em 2010:</strong> {mockData.grausAmeacaContext.solucao}
+            </p>
+            <p className="text-lg">
+              <strong className="text-white">Método de combate:</strong> {mockData.grausAmeacaContext.observacao}
+            </p>
+          </div>
+        </Card>
 
         {/* Status Atual de Ameaça */}
         <div className="mb-16">
@@ -155,6 +170,12 @@ const GrausAmeaca = () => {
                 alocação adequada de recursos e resposta proporcional para cada tipo de incidente, 
                 aumentando significativamente a taxa de sucesso das operações.
               </p>
+              <div className="bg-slate-800 p-4 rounded-lg mt-6">
+                <p className="text-sm text-center">
+                  <strong className="text-white">Resultado:</strong> Redução de <strong>87%</strong> nas baixas 
+                  operacionais e aumento de <strong>340%</strong> na eficiência de resposta.
+                </p>
+              </div>
             </div>
           </Card>
 
@@ -182,8 +203,8 @@ const GrausAmeaca = () => {
               
               <div className="bg-slate-100 p-4 rounded-lg">
                 <p className="text-sm text-slate-700 text-center">
-                  O sistema de classificação reduziu em <strong>87%</strong> as baixas 
-                  operacionais e aumentou a eficiência de resposta em <strong>340%</strong>.
+                  O sistema permite <strong>resposta proporcional</strong> baseada na análise 
+                  do potencial destrutivo e alcance geográfico das ameaças.
                 </p>
               </div>
             </div>

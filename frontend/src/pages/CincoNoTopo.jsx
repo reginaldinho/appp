@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
+import { Button } from '../components/ui/button';
 import { 
   Crown, 
   Snowflake, 
@@ -12,11 +13,15 @@ import {
   Ruler,
   Briefcase,
   Star,
-  Shield
+  Shield,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 import { mockData } from '../data/mock';
 
 const CincoNoTopo = () => {
+  const [expandedHero, setExpandedHero] = useState(null);
+
   const heroeIcons = {
     'O Rei': Crown,
     'Rainha de Gelo': Snowflake,
@@ -35,6 +40,10 @@ const CincoNoTopo = () => {
 
   const rankColors = {
     'S': '#7c3aed' // violet-600
+  };
+
+  const toggleExpanded = (heroId) => {
+    setExpandedHero(expandedHero === heroId ? null : heroId);
   };
 
   return (
@@ -76,12 +85,13 @@ const CincoNoTopo = () => {
           </div>
         </Card>
 
-        {/* Grid dos Heróis - EXATO DO DOCUMENTO */}
+        {/* Grid dos Heróis - TEXTOS COMPLETOS DO DOCUMENTO */}
         <div className="space-y-8">
           {mockData.cincoNoTopo.map((heroi, index) => {
             const IconComponent = heroeIcons[heroi.nomeHeroi];
             const flag = countryFlags[heroi.pais];
             const isLeader = heroi.nomeHeroi === 'Imperatriz do Deserto';
+            const isExpanded = expandedHero === heroi.id;
             
             return (
               <Card 
@@ -150,7 +160,38 @@ const CincoNoTopo = () => {
                   <div className="lg:col-span-2 space-y-6">
                     <div>
                       <h4 className="text-lg font-semibold text-slate-900 mb-3">História e Conquistas</h4>
-                      <p className="text-slate-700 leading-relaxed">{heroi.descricao}</p>
+                      
+                      {/* Resumo (sempre visível) */}
+                      <p className="text-slate-700 leading-relaxed mb-4">{heroi.descricao}</p>
+                      
+                      {/* Texto completo (expansível) */}
+                      {isExpanded && (
+                        <div className="bg-slate-100 p-6 rounded-lg">
+                          <p className="text-slate-700 leading-relaxed whitespace-pre-line">
+                            {heroi.textoCompleto}
+                          </p>
+                        </div>
+                      )}
+                      
+                      {/* Botão Ler Mais/Menos */}
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => toggleExpanded(heroi.id)}
+                        className="mt-4 text-blue-600 border-blue-200 hover:bg-blue-50"
+                      >
+                        {isExpanded ? (
+                          <>
+                            <ChevronUp className="h-4 w-4 mr-1" />
+                            Ler Menos
+                          </>
+                        ) : (
+                          <>
+                            <ChevronDown className="h-4 w-4 mr-1" />
+                            Ler Mais
+                          </>
+                        )}
+                      </Button>
                     </div>
 
                     {/* Especificações de Combate */}
