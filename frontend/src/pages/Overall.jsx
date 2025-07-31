@@ -51,9 +51,31 @@ const Overall = () => {
             Sistema Overall
           </h1>
           <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-            {mockData.overallSystem.description}
+            Sistema de classificação abrangente para categorizar capacidades dos agentes com base em 
+            seus atributos, potencial destrutivo e alcance geográfico.
           </p>
         </div>
+
+        {/* Contextualização - TEXTO COMPLETO DO DOCUMENTO */}
+        <Card className="p-8 mb-12 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+          <h2 className="text-3xl font-bold text-center mb-8">Explicação do Sistema</h2>
+          <div className="space-y-6 text-slate-300 leading-relaxed">
+            <p className="text-lg">
+              <strong className="text-white">{mockData.overallContext.explicacao}</strong>
+            </p>
+            <p className="text-lg">
+              <strong className="text-white">Diferença dos Graus de Ameaça:</strong> {mockData.overallContext.diferenca}
+            </p>
+            <p className="text-lg">
+              <strong className="text-white">Como Funciona:</strong> {mockData.overallContext.funcionamento}
+            </p>
+            <div className="bg-slate-800 p-6 rounded-lg mt-6">
+              <p className="text-center text-white font-semibold">
+                <strong>Finalidade:</strong> {mockData.overallContext.finalidade}
+              </p>
+            </div>
+          </div>
+        </Card>
 
         {/* Visualização do Hexágono */}
         <div className="mb-16 bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-12">
@@ -104,15 +126,22 @@ const Overall = () => {
                 </div>
                 <h3 className="font-semibold text-slate-900">Nível {level}</h3>
                 <p className="text-sm text-slate-600 mt-2">
-                  {level === 'D' && 'Básico'}
-                  {level === 'C' && 'Padrão'}
+                  {level === 'D' && 'Básico/Fraco'}
+                  {level === 'C' && 'Padrão/Média'}
                   {level === 'B' && 'Avançado'}
-                  {level === 'A' && 'Elite'}
+                  {level === 'A' && 'Elite/Gênios'}
                   {level === 'S' && 'Excepcional'}
                 </p>
               </Card>
             ))}
           </div>
+          
+          <Card className="p-6 bg-blue-50 border-blue-200">
+            <p className="text-center text-blue-800 font-medium">
+              <strong>Classificação do Agente:</strong> A partir da média dos atributos do herói, é definido sua 
+              classificação na TCO e, dependendo de sua experiência, a que missões ele está qualificado para ser mandado.
+            </p>
+          </Card>
         </div>
 
         {/* Detalhes dos Atributos - EXATO DO DOCUMENTO */}
@@ -172,6 +201,16 @@ const Overall = () => {
           })}
         </div>
 
+        {/* Informação Importante */}
+        <Card className="mt-12 p-6 bg-amber-50 border-amber-200">
+          <div className="text-center">
+            <Target className="h-8 w-8 text-amber-600 mx-auto mb-3" />
+            <p className="text-amber-800 font-medium">
+              <strong>Observação Importante:</strong> "Jogar objetos com força física ou telecinese não se aplica ao alcance."
+            </p>
+          </div>
+        </Card>
+
         {/* Informações Adicionais */}
         <div className="mt-16 grid lg:grid-cols-2 gap-8">
           <Card className="p-8 bg-slate-900 text-white">
@@ -189,11 +228,6 @@ const Overall = () => {
                 <strong className="text-white">Resposta Proporcional:</strong> Permite alocação 
                 adequada de recursos para cada tipo de incidente.
               </p>
-              <div className="mt-6 p-4 bg-slate-800 rounded-lg">
-                <p className="text-sm">
-                  <strong>Nota:</strong> "Jogar objetos com força física ou telecinese não se aplica ao alcance."
-                </p>
-              </div>
             </div>
           </Card>
 
@@ -212,10 +246,12 @@ const Overall = () => {
                 <div>
                   <div className="text-2xl font-bold text-green-600">Maioria</div>
                   <div className="text-sm text-slate-600">Agentes Rank C</div>
+                  <p className="text-xs text-slate-500">Na média</p>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-purple-600">5</div>
                   <div className="text-sm text-slate-600">Os Cinco no Topo</div>
+                  <p className="text-xs text-slate-500">Elite Mundial</p>
                 </div>
               </div>
               
