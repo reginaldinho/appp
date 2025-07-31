@@ -10,9 +10,9 @@ const Header = () => {
   const navigationItems = [
     { name: 'Início', path: '/' },
     { name: 'Sobre', path: '/sobre' },
-    { name: 'Departamentos', path: '/departamentos' },
     { name: 'Graus de Ameaça', path: '/graus-ameaca' },
-    { name: 'Operações', path: '/operacoes' },
+    { name: 'Overall', path: '/overall' },
+    { name: 'Os Cinco no Topo', path: '/cinco-no-topo' },
     { name: 'Notícias', path: '/noticias' },
     { name: 'Contato', path: '/contato' }
   ];
@@ -27,7 +27,7 @@ const Header = () => {
       <div className="bg-amber-600 text-slate-900 px-4 py-2 text-center text-sm font-medium">
         <div className="flex items-center justify-center gap-2">
           <AlertTriangle size={16} />
-          NÍVEL DE AMEAÇA ATUAL: GRAU III - MODERADA - Intervenção Especializada Requerida
+          NÍVEL DE AMEAÇA ATUAL: DEMÔNIO - Ameaças de Grau Médio Detectadas
         </div>
       </div>
 
@@ -45,12 +45,12 @@ const Header = () => {
           </Link>
 
           {/* Navegação Desktop */}
-          <nav className="hidden md:flex space-x-6">
+          <nav className="hidden lg:flex space-x-4">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`px-3 py-2 rounded-md transition-all duration-300 font-medium ${
+                className={`px-3 py-2 rounded-md transition-all duration-300 font-medium text-sm ${
                   isActivePath(item.path)
                     ? 'text-blue-400 bg-slate-800 border-b-2 border-blue-400'
                     : 'text-slate-300 hover:text-white hover:bg-slate-800'
@@ -73,7 +73,7 @@ const Header = () => {
           </div>
 
           {/* Menu Mobile */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-white hover:text-slate-300 transition-colors"
@@ -85,7 +85,7 @@ const Header = () => {
 
         {/* Menu Mobile Expandido */}
         {isMenuOpen && (
-          <div className="md:hidden bg-slate-800 rounded-lg mt-2 py-4 px-4 space-y-3">
+          <div className="lg:hidden bg-slate-800 rounded-lg mt-2 py-4 px-4 space-y-3">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}

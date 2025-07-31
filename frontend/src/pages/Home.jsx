@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Globe, Eye, Lock, ArrowRight, AlertCircle } from 'lucide-react';
+import { Shield, Globe, Eye, Lock, ArrowRight, AlertCircle, Users, Target } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
@@ -16,7 +16,7 @@ const Home = () => {
       
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-          {/* Conteúdo Principal */}
+          {/* Conteúdo Principal - BASEADO NO DOCUMENTO */}
           <div className="space-y-8">
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-blue-400">
@@ -35,15 +35,24 @@ const Home = () => {
               <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
                 {mockData.agency.mission}
               </p>
+              
+              <div className="bg-slate-800/50 border-l-4 border-l-blue-500 p-4 rounded">
+                <p className="text-slate-300 text-sm leading-relaxed">
+                  <strong className="text-white">Fundada em {mockData.agency.established}</strong> como resposta estratégica 
+                  ao crescente número de ameaças sobrenaturais e atividades ilegais de super-humanos. 
+                  Uma organização internacional de elite dedicada à proteção da humanidade contra 
+                  ameaças extraordinárias.
+                </p>
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/departamentos">
+              <Link to="/cinco-no-topo">
                 <Button 
                   size="lg" 
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold w-full sm:w-auto"
                 >
-                  Acesso Autorizado
+                  Os Cinco no Topo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -85,22 +94,26 @@ const Home = () => {
             <Card className="bg-slate-800/50 border-slate-700 p-6 backdrop-blur-sm">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold text-white">Status Operacional</h3>
+                  <h3 className="text-lg font-semibold text-white">Status Operacional TCO</h3>
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                 </div>
                 
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-slate-300">Sistemas de Contenção</span>
+                    <span className="text-slate-300">Recursos Militares</span>
                     <span className="text-green-400 font-medium">OPERACIONAL</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-slate-300">Rede de Vigilância</span>
+                    <span className="text-slate-300">Tecnologia de Ponta</span>
                     <span className="text-green-400 font-medium">ATIVA</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-slate-300">Resposta de Emergência</span>
-                    <span className="text-amber-400 font-medium">STANDBY</span>
+                    <span className="text-slate-300">Rede de Inteligência</span>
+                    <span className="text-green-400 font-medium">GLOBAL</span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-slate-300">Os Cinco no Topo</span>
+                    <span className="text-blue-400 font-medium">STANDBY</span>
                   </div>
                 </div>
               </div>
@@ -112,37 +125,37 @@ const Home = () => {
                 <AlertCircle className="h-6 w-6 text-amber-400" />
                 <h3 className="text-lg font-semibold text-white">Alerta Atual</h3>
               </div>
-              <Badge className="bg-amber-600 text-slate-900 mb-2">GRAU III - MODERADA</Badge>
+              <Badge className="bg-amber-600 text-slate-900 mb-2">GRAU DEMÔNIO</Badge>
               <p className="text-slate-300 text-sm">
-                Ameaças que requerem intervenção especializada detectadas. 
-                Todas as unidades em estado de prontidão.
+                Ameaças de grau médio detectadas em regiões metropolitanas. 
+                Grupos de agentes B em resposta coordenada.
               </p>
             </Card>
 
-            {/* Características da TCO */}
+            {/* Capacidades TCO - BASEADO NO DOCUMENTO */}
             <div className="grid grid-cols-2 gap-4">
               <Card className="bg-slate-800/30 border-slate-700 p-4 text-center hover:bg-slate-700/30 transition-colors">
                 <Globe className="h-8 w-8 text-blue-400 mx-auto mb-2" />
-                <h4 className="font-semibold text-white text-sm">Global</h4>
-                <p className="text-xs text-slate-400">Cobertura Mundial</p>
+                <h4 className="font-semibold text-white text-sm">Cobertura Global</h4>
+                <p className="text-xs text-slate-400">Centros de Comando</p>
               </Card>
               
               <Card className="bg-slate-800/30 border-slate-700 p-4 text-center hover:bg-slate-700/30 transition-colors">
-                <Eye className="h-8 w-8 text-purple-400 mx-auto mb-2" />
-                <h4 className="font-semibold text-white text-sm">Vigilância</h4>
-                <p className="text-xs text-slate-400">24/7 Monitoramento</p>
+                <Users className="h-8 w-8 text-purple-400 mx-auto mb-2" />
+                <h4 className="font-semibold text-white text-sm">Super-Humanos</h4>
+                <p className="text-xs text-slate-400">Elite Mundial</p>
               </Card>
               
               <Card className="bg-slate-800/30 border-slate-700 p-4 text-center hover:bg-slate-700/30 transition-colors">
-                <Shield className="h-8 w-8 text-green-400 mx-auto mb-2" />
-                <h4 className="font-semibold text-white text-sm">Contenção</h4>
-                <p className="text-xs text-slate-400">Especializada</p>
+                <Target className="h-8 w-8 text-green-400 mx-auto mb-2" />
+                <h4 className="font-semibold text-white text-sm">Resposta Rápida</h4>
+                <p className="text-xs text-slate-400">Mobilização Total</p>
               </Card>
               
               <Card className="bg-slate-800/30 border-slate-700 p-4 text-center hover:bg-slate-700/30 transition-colors">
                 <Lock className="h-8 w-8 text-red-400 mx-auto mb-2" />
-                <h4 className="font-semibold text-white text-sm">Classified</h4>
-                <p className="text-xs text-slate-400">Alto Sigilo</p>
+                <h4 className="font-semibold text-white text-sm">Alto Sigilo</h4>
+                <p className="text-xs text-slate-400">Mandato ONU</p>
               </Card>
             </div>
 
@@ -150,12 +163,12 @@ const Home = () => {
             <Card className="bg-slate-800/50 border-slate-700 p-6">
               <h3 className="text-lg font-semibold text-white mb-4">Acesso Rápido</h3>
               <div className="space-y-2">
-                <Link to="/operacoes" className="flex items-center justify-between text-slate-300 hover:text-white transition-colors py-2">
-                  <span>Operações Ativas</span>
+                <Link to="/graus-ameaca" className="flex items-center justify-between text-slate-300 hover:text-white transition-colors py-2">
+                  <span>Sistema de Graus de Ameaça</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
-                <Link to="/graus-ameaca" className="flex items-center justify-between text-slate-300 hover:text-white transition-colors py-2">
-                  <span>Classificação de Ameaças</span>
+                <Link to="/overall" className="flex items-center justify-between text-slate-300 hover:text-white transition-colors py-2">
+                  <span>Sistema Overall de Agentes</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link to="/noticias" className="flex items-center justify-between text-slate-300 hover:text-white transition-colors py-2">
