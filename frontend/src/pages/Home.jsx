@@ -237,17 +237,17 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="flex items-center justify-between py-3 border-b border-slate-700">
-                  <span className="text-slate-300">Rede de Inteligência</span>
+                  <span className="text-slate-300">Rede de Inteligência Global</span>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="h-5 w-5 text-green-400" />
-                    <span className="text-green-400 font-medium">GLOBAL</span>
+                    <span className="text-green-400 font-medium">EM ORDEM</span>
                   </div>
                 </div>
                 <div className="flex items-center justify-between py-3">
                   <span className="text-slate-300">Os Cinco no Topo</span>
                   <div className="flex items-center space-x-2">
-                    <Clock className="h-5 w-5 text-blue-400" />
-                    <span className="text-blue-400 font-medium">STANDBY</span>
+                    <CheckCircle className="h-5 w-5 text-green-400" />
+                    <span className="text-green-400 font-medium">EM OPERAÇÃO</span>
                   </div>
                 </div>
               </div>
@@ -274,31 +274,6 @@ const Home = () => {
                 </Link>
               </div>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Contato de Emergência */}
-      <section className="py-12 bg-red-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-4">
-              <Phone className="h-8 w-8" />
-              <div>
-                <div className="text-lg font-bold">LINHA DE EMERGÊNCIA 24/7</div>
-                <div className="text-red-100">Para situações que requerem resposta imediata</div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6">
-              <div className="text-center">
-                <div className="font-mono text-xl font-bold">+1-XXX-XXX-XXXX</div>
-                <div className="text-sm text-red-100">Internacional</div>
-              </div>
-              <Button variant="secondary" size="lg" className="bg-white text-red-600 hover:bg-red-50">
-                <ExternalLink className="h-4 w-4 mr-2" />
-                REPORTAR INCIDENTE
-              </Button>
-            </div>
           </div>
         </div>
       </section>

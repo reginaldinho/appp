@@ -97,7 +97,7 @@ const Contato = () => {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div>
+                  <div> 
                     <label className="block text-sm font-medium text-slate-700 mb-2">
                       E-mail *
                     </label>
@@ -118,28 +118,30 @@ const Contato = () => {
                       name="telefone"
                       value={formData.telefone}
                       onChange={handleInputChange}
-                      placeholder="+55 (11) 99999-9999"
+                      placeholder="+XX (XX) XXXXX-XXXX"
                     />
                   </div>
                 </div>
 
                 {/* Nível de Clearance */}
-                <div>
+                <div> 
                   <label className="block text-sm font-medium text-slate-700 mb-2">
-                    Nível de Autorização
+                    Nível de Autorização *
                   </label>
                   <select 
                     name="clearance"
                     value={formData.clearance}
                     onChange={handleInputChange}
+                    required
                     className="w-full p-3 border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   >
                     <option value="">Selecione seu nível</option>
                     <option value="civilian">Civil</option>
-                    <option value="gamma">Gamma</option>
-                    <option value="beta">Beta</option>
-                    <option value="alpha">Alfa</option>
-                    <option value="alpha-zero">Alfa-Zero</option>
+                    <option value="gamma">Rank D</option>
+                    <option value="beta">Rank C</option>
+                    <option value="alpha">Rank B</option>
+                    <option value="alpha-zero">Rank A</option>
+                    <option value="pikas">Rank S</option>
                   </select>
                 </div>
 
@@ -156,28 +158,31 @@ const Contato = () => {
                       required
                       className="w-full p-3 border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     >
-                      <option value="incidente">Relatório de Incidente</option>
+                      <option value="possível ameaça">Relatar possível ameaça</option>
                       <option value="informacao">Solicitação de Informação</option>
-                      <option value="cooperacao">Cooperação Interagência</option>
+                      <option value="erro">Relatar grau de ameaça superior ao registrado</option>
                       <option value="emergencia">Emergência</option>
                       <option value="outros">Outros</option>
                     </select>
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">
-                      Nível de Urgência *
+                      Grau de Ameaça Observado *
                     </label>
                     <select 
-                      name="urgencia"
+                      name="Grau de Ameaça observado"
                       value={formData.urgencia}
                       onChange={handleInputChange}
                       required
                       className="w-full p-3 border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     >
-                      <option value="baixa">Baixa</option>
-                      <option value="media">Média</option>
-                      <option value="alta">Alta</option>
-                      <option value="critica">Crítica</option>
+                      <option value="Nenhum">Nenhum</option>
+                      <option value="Humano">Humano</option>
+                      <option value="Monstro">Monstro</option>
+                      <option value="Demonio">Demônio</option>
+                      <option value="Calamidade">Calamidade</option>
+                      <option value="Continental">Continental</option>
+                      <option value="Global">Global</option>
                     </select>
                   </div>
                 </div>
@@ -286,15 +291,15 @@ const Contato = () => {
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between">
                   <span className="text-slate-600">Emergência:</span>
-                  <span className="font-semibold text-red-600">&lt; 1 hora</span>
+                  <span className="font-semibold text-red-600">&lt; até 1 hora</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-600">Urgente:</span>
-                  <span className="font-semibold text-amber-600">&lt; 24 horas</span>
+                  <span className="font-semibold text-amber-600">&lt; 6-24 horas</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-600">Normal:</span>
-                  <span className="font-semibold text-blue-600">2-5 dias úteis</span>
+                  <span className="font-semibold text-blue-600">1-2 dias úteis</span>
                 </div>
               </div>
             </Card>

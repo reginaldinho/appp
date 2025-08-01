@@ -7,24 +7,24 @@ import { mockData } from '../data/mock';
 const About = () => {
   const milestones = [
     {
-      year: "2019",
+      year: "2006",
       event: "Fundação da TCO pela Assembleia Geral da ONU",
-      description: "Criação oficial da organização após eventos anômalos globais"
+      description: "Criação oficial da organização após crescente de eventos anômalos por todo o mundo"
     },
     {
-      year: "2020", 
-      event: "Primeira Operação de Contenção",
-      description: "Contenção bem-sucedida da Anomalia Código-Alpha em Chernobyl"
+      year: "2010", 
+      event: "Criação dos Graus de Ameaça",
+      description: "Desenvolvimento de método para separar nível de ameaças"
     },
     {
-      year: "2022",
-      event: "Expansão para América Latina",
-      description: "Abertura do Centro Regional em São Paulo, Brasil"
+      year: "2012",
+      event: "Seleção de representantes",
+      description: "Cada país escolheu um herói representante para acompanhar o líder político em reuniões importantes"
     },
     {
-      year: "2024",
-      event: "Protocolo Omega Implementado",
-      description: "Desenvolvimento de protocolos para ameaças existenciais"
+      year: "2013",
+      event: "Criação dos Cinco no Topo",
+      description: "Criação de grupo com os cinco melhores heróis do mundo, inspirado no nome de antigo maior grupo"
     }
   ];
 

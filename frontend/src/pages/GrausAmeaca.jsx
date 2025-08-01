@@ -186,17 +186,17 @@ const GrausAmeaca = () => {
             </h3>
             <div className="space-y-6">
               <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">98.7%</div>
+                <div className="text-4xl font-bold text-green-600 mb-2">100%</div>
                 <div className="text-slate-600">Taxa de Sucesso desde 2010</div>
               </div>
               
               <div className="grid grid-cols-2 gap-4 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-blue-600">1,247</div>
+                  <div className="text-2xl font-bold text-blue-600">47,247</div>
                   <div className="text-sm text-slate-600">Operações Realizadas</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-purple-600">156</div>
+                  <div className="text-2xl font-bold text-purple-600">104,569</div>
                   <div className="text-sm text-slate-600">Ameaças Neutralizadas</div>
                 </div>
               </div>

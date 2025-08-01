@@ -271,12 +271,12 @@ export const mockData = {
 
   // Estatísticas operacionais
   stats: {
-    totalOperations: 1247,
-    successRate: 98.7,
-    activeThreats: 8,
-    containedEntities: 156,
+    totalOperations: 47.247,
+    successRate: 100,
+    activeThreats: 17,
+    containedEntities: 104.569,
     researchProjects: 34,
-    globalCoverage: 195
+    globalCoverage: 193
   },
 
   // Contatos de emergência

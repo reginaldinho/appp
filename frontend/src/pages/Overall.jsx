@@ -200,17 +200,6 @@ const Overall = () => {
             );
           })}
         </div>
-
-        {/* Informação Importante */}
-        <Card className="mt-12 p-6 bg-amber-50 border-amber-200">
-          <div className="text-center">
-            <Target className="h-8 w-8 text-amber-600 mx-auto mb-3" />
-            <p className="text-amber-800 font-medium">
-              <strong>Observação Importante:</strong> "Jogar objetos com força física ou telecinese não se aplica ao alcance."
-            </p>
-          </div>
-        </Card>
-
         {/* Informações Adicionais */}
         <div className="mt-16 grid lg:grid-cols-2 gap-8">
           <Card className="p-8 bg-slate-900 text-white">
